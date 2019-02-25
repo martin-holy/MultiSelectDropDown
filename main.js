@@ -45,6 +45,7 @@ var xSelect = function(id) {
     list: function() {
       let out = [],
           dataSource = JSON.parse(this.element.dataset.dataSource || null);
+
       this.element.querySelectorAll('.optionSelected').forEach(x => {
         let style = '';
 
@@ -56,7 +57,9 @@ var xSelect = function(id) {
 
         out.push(`<span${style}>${x.textContent}</span>`);
       });
+
       this.element.querySelector('.selectedOptions').innerHTML = out.join('');
+
       if (this.element.dataset.onchange)
         window[this.element.dataset.onchange]();
     },
