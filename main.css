@@ -1,0 +1,85 @@
+body {
+  background-color: #33373A;
+  color: #DBE4E4;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.xSelect {
+  font-size: 14px;
+  width: 204px;
+}
+
+.xSelect > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 24px;
+  background-color: #33373A;
+  padding: 0px 2px;
+}
+
+.xSelect .selectedOptions {
+  flex-grow: 1;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.xSelect span {
+  background-color: #2A4151;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0px 2px;
+  margin-right: 3px;
+}
+
+.xSelect .button {
+  background-color: #24282A;
+  min-width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.xSelect ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 1px 0px 0px 0px;
+  position: absolute;
+  width: 202px;
+  visibility: hidden;
+  border: 1px solid black;
+  border-radius: 2px;
+  max-height: 200px;
+  overflow: auto;
+  background-color: #45474B;
+}
+
+.xSelect li {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.xSelect li:hover {
+  background-color: #33373A;
+}
+
+.xSelect .optionSelected {
+  background-color: #007ACC;
+}
+
+.xSelect .overlay {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
