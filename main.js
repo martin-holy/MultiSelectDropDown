@@ -14,7 +14,7 @@ var xSelect = function(id) {
       elm.innerHTML =
         `<div onclick="xSelect('${id}').show();">
           <div class="selectedOptions"></div>
-          <div class="button">⏷</div>
+          <div class="button">▼</div>
         </div>
         <ul>${options.join('')}</ul>`;
 
@@ -69,7 +69,7 @@ var xSelect = function(id) {
           hide = ul.style.visibility == 'visible';
           
       ul.style.visibility = hide ? 'hidden' : 'visible';
-      this.element.querySelector('.button').innerHTML = hide ? '⏷' : '✔';
+      this.element.querySelector('.button').innerHTML = hide ? '▼' : '✔';
       
       if (hide) window.removeEventListener('mouseup', this.xSelectClose);
       else window.addEventListener('mouseup', this.xSelectClose);
@@ -87,7 +87,7 @@ var xSelect = function(id) {
         currentElm = currentElm.parentElement;
       }
 
-      for (let elm of document.getElementsByClassName('xSelect')) {
+      for (let elm of Array.from(document.getElementsByClassName('xSelect'))) {
         if (elm.querySelector('ul').style.visibility == 'visible' && elm != select) 
           xSelect(elm.id).show(); // hide
       }

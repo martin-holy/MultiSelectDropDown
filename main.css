@@ -41,10 +41,12 @@ body {
   height: 18px;
   border: 1px solid black;
   border-radius: 2px;
-  text-align: center;
   font-size: 14px;
   cursor: pointer;
   margin-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .xSelect ul {
@@ -72,14 +74,4 @@ body {
 
 .xSelect .optionSelected {
   background-color: #007ACC;
-}
-
-.xSelect .overlay {
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
